@@ -18,6 +18,9 @@ def find_smallest_int(arr):
 
     return smallest_int
 
+def find_smallest_int(arr):
+    return min(arr)
+
 ### Test
 #-------
 
