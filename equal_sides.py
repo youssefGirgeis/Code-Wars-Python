@@ -15,14 +15,10 @@ def find_even_index(arr):
     result = -1
 
     for index in range(len(arr)):
-        left_list = arr[:index]
-        right_list = arr[index+1:]
 
-        if sum(left_list) == sum(right_list):
-            result = index
-            break 
-        
-    return result
+        if sum(arr[:index]) == sum(arr[index+1:]):
+            return index 
+    return -1
 
 
 ### Test
