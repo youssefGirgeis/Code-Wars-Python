@@ -4,7 +4,7 @@
 # move_zeros([false,1,0,1,2,0,1,3,"a"]) # returns[false,1,1,2,1,3,"a",0,0]
 
 
-#solution
+#solution 1
 
 def move_zeros(array):
     result = []
@@ -24,3 +24,12 @@ def move_zeros(array):
 
 print(move_zeros([0,1,2,0,1,0,1,0,3,0,1]))
 print(move_zeros([False,1,0,1,2,0,1,3,"a"]))
+
+# solution 2: using list comperhension 
+
+def move_zeros2(array):
+    non_zeros = [i for i in array if isinstance(i, bool) or i != 0]
+    return non_zeros + [0]*(len(array) - len(non_zeros))
+
+print(move_zeros2([0,1,2,0,1,0,1,0,3,0,1]))
+print(move_zeros2([False,1,0,1,2,0,1,3,"a"]))
