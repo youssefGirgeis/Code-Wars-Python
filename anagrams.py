@@ -16,7 +16,7 @@ def anagrams(word, words):
     anagrams_list = []
     for w in words:
 
-        if ''.join(sorted(word)) == ''.join(sorted(w)):
+        if sorted(word) == sorted(w):
             anagrams_list.append(w)
 
     return anagrams_list
